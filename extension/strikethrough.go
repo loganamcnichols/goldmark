@@ -1,21 +1,21 @@
 package extension
 
 import (
-	"github.com/yuin/goldmark"
-	gast "github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/extension/ast"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer"
-	"github.com/yuin/goldmark/renderer/html"
-	"github.com/yuin/goldmark/text"
-	"github.com/yuin/goldmark/util"
+	"github.com/loganamcnichols/goldmark"
+	gast "github.com/loganamcnichols/goldmark/ast"
+	"github.com/loganamcnichols/goldmark/extension/ast"
+	"github.com/loganamcnichols/goldmark/parser"
+	"github.com/loganamcnichols/goldmark/renderer"
+	"github.com/loganamcnichols/goldmark/renderer/html"
+	"github.com/loganamcnichols/goldmark/text"
+	"github.com/loganamcnichols/goldmark/util"
 )
 
 type strikethroughDelimiterProcessor struct {
 }
 
 func (p *strikethroughDelimiterProcessor) IsDelimiter(b byte) bool {
-	return b == '~'
+	return b == '\n'
 }
 
 func (p *strikethroughDelimiterProcessor) CanOpenCloser(opener, closer *parser.Delimiter) bool {
@@ -90,14 +90,14 @@ func (r *StrikethroughHTMLRenderer) renderStrikethrough(
 	w util.BufWriter, source []byte, n gast.Node, entering bool) (gast.WalkStatus, error) {
 	if entering {
 		if n.Attributes() != nil {
-			_, _ = w.WriteString("<del")
+			_, _ = w.WriteString("<span")
 			html.RenderAttributes(w, n, StrikethroughAttributeFilter)
 			_ = w.WriteByte('>')
 		} else {
-			_, _ = w.WriteString("<del>")
+			_, _ = w.WriteString("<span>")
 		}
 	} else {
-		_, _ = w.WriteString("</del>")
+		_, _ = w.WriteString("</span>")
 	}
 	return gast.WalkContinue, nil
 }

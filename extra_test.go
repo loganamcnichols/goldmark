@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
-	"github.com/yuin/goldmark/testutil"
+	. "github.com/loganamcnichols/goldmark"
+	"github.com/loganamcnichols/goldmark/ast"
+	"github.com/loganamcnichols/goldmark/parser"
+	"github.com/loganamcnichols/goldmark/renderer/html"
+	"github.com/loganamcnichols/goldmark/testutil"
 )
 
 var testTimeoutMultiplier = 1.0

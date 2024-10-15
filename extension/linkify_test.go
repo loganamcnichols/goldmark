@@ -4,9 +4,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/renderer/html"
-	"github.com/yuin/goldmark/testutil"
+	"github.com/loganamcnichols/goldmark"
+	"github.com/loganamcnichols/goldmark/renderer/html"
+	"github.com/loganamcnichols/goldmark/testutil"
 )
 
 func TestLinkify(t *testing.T) {

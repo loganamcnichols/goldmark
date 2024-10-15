@@ -1,9 +1,9 @@
 package extension
 
 import (
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
+	"github.com/loganamcnichols/goldmark"
+	"github.com/loganamcnichols/goldmark/parser"
+	"github.com/loganamcnichols/goldmark/renderer/html"
 )
 
 // A CJKOption sets options for CJK support mostly for HTML based renderers.

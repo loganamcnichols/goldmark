@@ -1,10 +1,10 @@
 goldmark
 ==========================================
 
-[![https://pkg.go.dev/github.com/yuin/goldmark](https://pkg.go.dev/badge/github.com/yuin/goldmark.svg)](https://pkg.go.dev/github.com/yuin/goldmark)
-[![https://github.com/yuin/goldmark/actions?query=workflow:test](https://github.com/yuin/goldmark/workflows/test/badge.svg?branch=master&event=push)](https://github.com/yuin/goldmark/actions?query=workflow:test)
+[![https://pkg.go.dev/github.com/loganamcnichols/goldmark](https://pkg.go.dev/badge/github.com/loganamcnichols/goldmark.svg)](https://pkg.go.dev/github.com/loganamcnichols/goldmark)
+[![https://github.com/loganamcnichols/goldmark/actions?query=workflow:test](https://github.com/loganamcnichols/goldmark/workflows/test/badge.svg?branch=master&event=push)](https://github.com/loganamcnichols/goldmark/actions?query=workflow:test)
 [![https://coveralls.io/github/yuin/goldmark](https://coveralls.io/repos/github/yuin/goldmark/badge.svg?branch=master)](https://coveralls.io/github/yuin/goldmark)
-[![https://goreportcard.com/report/github.com/yuin/goldmark](https://goreportcard.com/badge/github.com/yuin/goldmark)](https://goreportcard.com/report/github.com/yuin/goldmark)
+[![https://goreportcard.com/report/github.com/loganamcnichols/goldmark](https://goreportcard.com/badge/github.com/loganamcnichols/goldmark)](https://goreportcard.com/report/github.com/loganamcnichols/goldmark)
 
 > A Markdown parser written in Go. Easy to extend, standards-compliant, well-structured.
 
@@ -56,7 +56,7 @@ Features
 Installation
 ----------------------
 ```bash
-$ go get github.com/yuin/goldmark
+$ go get github.com/loganamcnichols/goldmark
 ```
 
 
@@ -67,7 +67,7 @@ Import packages:
 ```go
 import (
     "bytes"
-    "github.com/yuin/goldmark"
+    "github.com/loganamcnichols/goldmark"
 )
 ```
 
@@ -108,10 +108,10 @@ Custom parser and renderer
 ```go
 import (
     "bytes"
-    "github.com/yuin/goldmark"
-    "github.com/yuin/goldmark/extension"
-    "github.com/yuin/goldmark/parser"
-    "github.com/yuin/goldmark/renderer/html"
+    "github.com/loganamcnichols/goldmark"
+    "github.com/loganamcnichols/goldmark/extension"
+    "github.com/loganamcnichols/goldmark/parser"
+    "github.com/loganamcnichols/goldmark/renderer/html"
 )
 
 md := goldmark.New(
@@ -175,7 +175,7 @@ Parser and Renderer options
     - This extension enables Table, Strikethrough, Linkify and TaskList.
     - This extension does not filter tags defined in [6.11: Disallowed Raw HTML (extension)](https://github.github.com/gfm/#disallowed-raw-html-extension-).
     If you need to filter HTML tags, see [Security](#security).
-    - If you need to parse github emojis, you can use [goldmark-emoji](https://github.com/yuin/goldmark-emoji) extension.
+    - If you need to parse github emojis, you can use [goldmark-emoji](https://github.com/loganamcnichols/goldmark-emoji) extension.
 - `extension.DefinitionList`
     - [PHP Markdown Extra: Definition lists](https://michelf.ca/projects/php-markdown/extra/#def-list)
 - `extension.Footnote`
@@ -360,7 +360,7 @@ for _, path := range files {
 }
 ```
 
-You can use [goldmark-meta](https://github.com/yuin/goldmark-meta) to define a id prefix in the markdown document:
+You can use [goldmark-meta](https://github.com/loganamcnichols/goldmark-meta) to define a id prefix in the markdown document:
 
 
 ```markdown
@@ -471,11 +471,11 @@ Extensions
 --------------------
 ### List of extensions
 
-- [goldmark-meta](https://github.com/yuin/goldmark-meta): A YAML metadata
+- [goldmark-meta](https://github.com/loganamcnichols/goldmark-meta): A YAML metadata
   extension for the goldmark Markdown parser.
-- [goldmark-highlighting](https://github.com/yuin/goldmark-highlighting): A syntax-highlighting extension
+- [goldmark-highlighting](https://github.com/loganamcnichols/goldmark-highlighting): A syntax-highlighting extension
   for the goldmark markdown parser.
-- [goldmark-emoji](https://github.com/yuin/goldmark-emoji): An emoji
+- [goldmark-emoji](https://github.com/loganamcnichols/goldmark-emoji): An emoji
   extension for the goldmark Markdown parser.
 - [goldmark-mathjax](https://github.com/litao91/goldmark-mathjax): Mathjax support for the goldmark markdown parser
 - [goldmark-pdf](https://github.com/stephenafamo/goldmark-pdf): A PDF renderer that can be passed to `goldmark.WithRenderer()`.
@@ -498,9 +498,9 @@ Extensions
 - [goldmark-tgmd](https://github.com/Mad-Pixels/goldmark-tgmd): A Telegram markdown renderer that can be passed to `goldmark.WithRenderer()`.
 
 ### Loading extensions at runtime
-[goldmark-dynamic](https://github.com/yuin/goldmark-dynamic) allows you to write a goldmark extension in Lua and load it at runtime without re-compilation.
+[goldmark-dynamic](https://github.com/loganamcnichols/goldmark-dynamic) allows you to write a goldmark extension in Lua and load it at runtime without re-compilation.
 
-Please refer to  [goldmark-dynamic](https://github.com/yuin/goldmark-dynamic) for details.
+Please refer to  [goldmark-dynamic](https://github.com/loganamcnichols/goldmark-dynamic) for details.
 
 
 goldmark internal(for extension developers)

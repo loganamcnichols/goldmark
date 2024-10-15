@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"github.com/yuin/goldmark/ast"
-	"github.com/yuin/goldmark/text"
-	"github.com/yuin/goldmark/util"
+	"github.com/loganamcnichols/goldmark/ast"
+	"github.com/loganamcnichols/goldmark/text"
+	"github.com/loganamcnichols/goldmark/util"
 )
 
 type blockquoteParser struct {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	textm "github.com/yuin/goldmark/text"
+	textm "github.com/loganamcnichols/goldmark/text"
 )
 
 // A BaseBlock struct implements the Node interface partialliy.
