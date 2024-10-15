@@ -40,7 +40,7 @@ func NewStrikethroughParser() parser.InlineParser {
 }
 
 func (s *strikethroughParser) Trigger() []byte {
-	return []byte{'~'}
+	return []byte{'\n'}
 }
 
 func (s *strikethroughParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
