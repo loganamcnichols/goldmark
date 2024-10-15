@@ -23,7 +23,7 @@ func NewDefinitionListParser() parser.BlockParser {
 }
 
 func (b *definitionListParser) Trigger() []byte {
-	return []byte{':'}
+	return []byte{'\n'}
 }
 
 func (b *definitionListParser) Open(parent gast.Node, reader text.Reader, pc parser.Context) (gast.Node, parser.State) {
@@ -110,7 +110,7 @@ func NewDefinitionDescriptionParser() parser.BlockParser {
 }
 
 func (b *definitionDescriptionParser) Trigger() []byte {
-	return []byte{':'}
+	return []byte{'\n'}
 }
 
 func (b *definitionDescriptionParser) Open(
